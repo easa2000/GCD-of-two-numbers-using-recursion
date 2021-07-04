@@ -1,0 +1,22 @@
+// GCD of two number using recursion
+#include<stdio.h>
+int GCD(int,int);
+void main(){
+    int num1,num2,res;
+    printf("\n Enter the first number: ");
+    scanf("%d",&num1);
+    
+    printf("\n Enter the second number: ");
+    scanf("%d",&num2);
+
+    res = GCD(num1,num2);
+
+    printf("\n GCD of %d and %d = %d",num1,num2,res);
+}
+int GCD(int x,int y){
+    int rem = x % y;
+    if(rem == 0)
+        return y;
+    else
+        return (GCD(y,rem));
+}
